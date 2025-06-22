@@ -3,25 +3,34 @@ html {
 }
 
 #banner {
-  /*width: 100%;*/
-  height: 24rem;
-  background-image: url('../img/meat_pack_jumbotron.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  position: relative;
+  height: 21rem;
+  background: url('../img/meat_pack_jumbotron.jpg') center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  overflow: hidden; /* makes sure the overlay sits nicely */
 }
 
+/* the grey filter */
+#banner::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.2); /* black at 50% opacity */
+  z-index: 0;
+}
+
+/* your title */
 #banner h1 {
-  margin-bottom: -15%;
-  font-size: 5rem;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  color: white;
-  background: rgba(0, 0, 0, 0.5)
+  position: relative;  /* bring it above the overlay */
+  z-index: 1;
+  color: #fff;
+  font-size: 4rem;     /* tweak as needed */
+  font-weight: 400;    /* light/normal */
+  font-family: 'Raleway', sans-serif;
 }
 
 .justify-content-center p {

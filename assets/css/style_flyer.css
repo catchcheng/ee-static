@@ -2,6 +2,50 @@ html {
   font-size: 16px;
 }
 
+#banner {
+  position: relative;
+  height: 21rem;
+  background: url('../img/shop_front.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden; /* makes sure the overlay sits nicely */
+}
+
+/* the grey filter */
+#banner::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5); /* black at 50% opacity */
+  z-index: 0;
+}
+
+/* your title */
+#banner h1 {
+  position: relative;  /* bring it above the overlay */
+  z-index: 1;
+  color: #fff;
+  font-size: 4rem;     /* tweak as needed */
+  font-weight: 400;    /* light/normal */
+  font-family: 'Raleway', sans-serif;
+}
+
+.flyer-section p {
+  margin-bottom: 0.25rem;  /* even tighter */
+}
+
+/* override FB plugin's extra top margin */
+.flyer-section .fb-page,
+.flyer-section .fb-page iframe,
+.flyer-section .fb_iframe_widget,
+.flyer-section .fb_iframe_widget span {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
 .justify-content-center p {
   margin-top: 2%;
   text-decoration: none;

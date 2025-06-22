@@ -57,12 +57,41 @@ Follow Us on Facebook @eastendmeatsandsausage and Instagram/Twitter @eastendmeat
 
 </head>
 <body>
-  <div class="container py-5 my-5">
+  <!-- Jumbotron Banner -->
+  <div id="banner">
+  	<h1>FLYER</h1>
+  </div>
+
+  <div class="container py-4 my-5">
     <div class="row justify-content-center">
       <div class="col-md-10 col-sm-6">
-          <!--<img src="../assets/img/flyer_may19.png" alt="flyer" class="jumbotron bg-white m-0 p-0">-->
-          <!--<button type="button" class="btn btn-dark btn-lg"><a href="../assets/img/flyer_may19.png" class="text-white"> Download Now </a></button>-->
-          <button type="button" class="btn btn-danger badge-pill btn-xl btn-block"><a href="../assets/img/flyer_may1022.png" target="_blank" style="text-decoration: none;"><p>Download Now</p></a></button>
+        <div id="fb-root"></div>
+          <script async defer crossorigin="anonymous"
+            src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0"></script>
+
+          <section class="text-center flyer-section">
+            <h2 class="mb-3" style="font-size: large;">Don’t miss out!</h2>
+            <h2 class="mb-3" style="font-size: large;">Follow us on FB to catch our latest flyers as soon as they’re released.</h2>
+            <div class="fb-page" 
+                data-href="https://www.facebook.com/eastendmeatsandsausage"
+                data-tabs="timeline"
+                data-width="500"
+                data-height="720"
+                data-small-header="true"
+                data-adapt-container-width="true"
+                data-hide-cover="true"
+                data-show-facepile="false">
+              <blockquote cite="https://www.facebook.com/eastendmeatsandsausage"
+                          class="fb-xfbml-parse-ignore">
+                <a href="https://www.facebook.com/eastendmeatsandsausage">
+                  Eastend Meats & Sausage
+                </a>
+              </blockquote>
+            </div>
+          </section>
+
+
+          <!-- <button type="button" class="btn btn-danger badge-pill btn-xl btn-block"><a href="../assets/img/flyer_may1022.png" target="_blank" style="text-decoration: none;"><p>Download Now</p></a></button> -->
 
       </div>
     </div>
